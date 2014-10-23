@@ -10,6 +10,8 @@ streaming the data.
 Install it with `npm install htmltable` and use it with browserify. You can test
 the module by running `npm run build` and open the `test.html` file.
 
+![Example](https://i.imgflip.com/ddyux.gif)
+
 ## Usage
 
 ```js
