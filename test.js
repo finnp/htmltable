@@ -3,6 +3,7 @@ var htmltable = require('./')
 
 window.onload = function () {
   var table = htmltable('#table')
+  // var table = htmltable(document.querySelector('#table'))
 
   table.write({a: 1})
   table.write({a: 0, b:1})

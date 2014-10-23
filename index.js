@@ -1,9 +1,10 @@
 var Writable = require('stream').Writable
 
 
-module.exports = function (selector) {
+module.exports = function (parent) {
+  if(typeof parent === 'string')
+    parent = document.querySelector(parent)
   var totable = new Writable({objectMode: true})
-  var parent = document.querySelector(selector)
   var table = document.createElement('table')
   var header = document.createElement('tr')
   table.appendChild(header)

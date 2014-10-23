@@ -17,7 +17,7 @@ the module by running `npm run build` and open the `test.html` file.
 ```js
 var htmltable = require('htmltable')
 
-var table = htmltable('#table')
+var table = htmltable(document.querySelector('#table'))
 
 table.write({a: 1})
 window.setTimeout(function () {
@@ -25,6 +25,8 @@ window.setTimeout(function () {
   table.end()
 }, 1000)
 ```
+
+You can also pass in a selector like `htmltable('#table')` directly.
 
 where the body of the HTMl element contains:
 ```
