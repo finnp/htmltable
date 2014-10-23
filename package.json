@@ -23,5 +23,6 @@
   "homepage": "https://github.com/finnp/htmltable",
   "devDependencies": {
     "browserify": "^6.1.0"
-  }
+  },
+  "dependencies": {}
 }

@@ -30,7 +30,9 @@ module.exports = function (selector) {
     var row = document.createElement('tr')
     keys.forEach(function (key) {
       var cell = document.createElement('td')
-      var value = data[key] || ''
+      var value
+      if(data[key] === 0) value = '0'
+      else value = data[key] || ''
       cell.appendChild(document.createTextNode(value))
       row.appendChild(cell)
     })
