@@ -7,6 +7,9 @@ the data into memory before rendering.
 This module is written for the browser and will update the head with javascript while
 streaming the data.
 
+Install it with `npm install htmltable` and use it with browserify. You can test
+the module by running `npm run build` and open the `test.html` file.
+
 ## Usage
 
 ```js
@@ -15,8 +18,10 @@ var htmltable = require('htmltable')
 var table = htmltable('#table')
 
 table.write({a: 1})
-table.write({a: 2, b:1})
-table.end()
+window.setTimeout(function () {
+  table.write({a: 2, b:1})
+  table.end()
+}, 1000)
 ```
 
 where the body of the HTMl element contains:
@@ -46,3 +51,5 @@ it will eventually be
 </table>
 </div>
 ```
+
+but you will be able to see the first row before the second comes in.
