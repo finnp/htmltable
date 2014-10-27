@@ -7,6 +7,7 @@ window.onload = function () {
 
   table.write({a: 1})
   table.write({a: 0, b:1})
+  table.write({a: {b: 1}})
   table.write({a: null, b:undefined}) // empty row
   table.write({c: 3})
   window.setTimeout(function () {

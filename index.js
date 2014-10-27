@@ -34,6 +34,8 @@ module.exports = function (parent) {
       var value
       if(data[key] === 0) value = '0'
       else value = data[key] || ''
+      if (typeof value == 'object')
+        value = JSON.stringify(value)
       cell.appendChild(document.createTextNode(value))
       row.appendChild(cell)
     })
