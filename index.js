@@ -8,6 +8,7 @@ module.exports = function (parent) {
   var table = document.createElement('table')
   var header = document.createElement('tr')
   table.appendChild(header)
+  while (parent.firstChild) parent.removeChild(parent.firstChild)
   parent.appendChild(table)
   var keys = []
   totable._write = function (data, enc, cb) {

@@ -1,7 +1,6 @@
 var htmltable = require('./')
 
-
-window.onload = function () {
+function test() {
   var table = htmltable('#table')
   // var table = htmltable(document.querySelector('#table'))
 
@@ -14,4 +13,11 @@ window.onload = function () {
     table.write({a: 2, d: 3})
     table.end()
   }, 1000)
+  
+  window.setTimeout(function () {
+    test() // should not append
+  }, 3000)
 }
+
+
+window.onload = test
